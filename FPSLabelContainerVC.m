@@ -50,6 +50,7 @@
 //可拖动
 - (void) panMoveOnScreen
 {
+    //获取到拖动的当前坐标点
     CGPoint translation = [_panGestureRecognizer translationInView:self.view];
     
     CGPoint center = presentedViewController.view.center;

@@ -66,17 +66,17 @@
     if (center.x - centerWidthOffset < 0) {
         center.x = centerWidthOffset;
     }
-    
+    //获取y轴坐标
     CGFloat maximumY = CGRectGetHeight(self.view.bounds) -  CGRectGetHeight(presentedViewController.view.frame);
     if (center.y - centerHeightOffset > maximumY) {
         center.y = maximumY + centerHeightOffset;
     }
-    
+    //获取到x轴坐标
     CGFloat maximumX = CGRectGetWidth(self.view.bounds) - CGRectGetWidth(presentedViewController.view.frame);
     if (center.x - centerWidthOffset > maximumX) {
         center.x = maximumX + centerWidthOffset;
     }
-    
+    //y轴和x轴相交的点为中心点
     presentedViewController.view.center = center;
     
     [_panGestureRecognizer setTranslation:CGPointZero inView:self.view];
